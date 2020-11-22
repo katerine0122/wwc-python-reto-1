@@ -20,6 +20,6 @@ if __name__ == '__main__':
                     "writING scrIPts tO solve moDErn problems"
     texto_procesado = limpiar_stop_words(texto_entrada)
     texto_limpio = "the new python programmer a great person. he excellent solving problems of coding and writing " \
-                   "scripts to solve modern  problems"
+                   "scripts to solve modern problems"
     assert texto_limpio == texto_procesado, "Tu función aun no limpia de forma correcta"
     print("Tu limpiador de texto funciona!. FELICITACIONES!!!")
