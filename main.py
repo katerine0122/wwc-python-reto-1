@@ -10,15 +10,18 @@ def limpiar_stop_words(texto_a_limpiar):
     minúscula y sin stopwords.
     Pista: necesitaras las funciones .split() y .join() para convertir el texto a lista y viceversa
     """
-    # Escribe tu código aquí.
+    texto_a_limpiar = texto_a_limpiar.split(sep=' ')
+    texto_a_limpiar = [word for word in texto_a_limpiar if word not in (stopwords)]
+    texto_a_limpiar = ' '.join(texto_a_limpiar)
 
-    return texto_a_limpiar
+    return texto_a_limpiar.lower()
 
 
 if __name__ == '__main__':
     texto_entrada = "The NEW python prograMMER is a GREAT person. He is EXCEllent solving problems OF CODING anD " \
                     "writING scrIPts tO solve moDErn problems"
     texto_procesado = limpiar_stop_words(texto_entrada)
+    print(texto_procesado)
     texto_limpio = "the new python programmer a great person. he excellent solving problems of coding and writing " \
                    "scripts to solve modern problems"
     assert texto_limpio == texto_procesado, "Tu función aun no limpia de forma correcta"
